@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planner Card Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title">Planner Card Builder
+      <img src="icon.png" alt="Icon Planner" class="logo-icon"></h1>
+    </header>
+
+  <main>
+    <form id="planner-form" aria-describedby="form-desc">
+      <p id="form-desc"><b>Make Planner</b></p>
+
+      <div class="form-group">
+        <label for="input-title">Planner Title</label>
+        <input type="text" id="input-title" name="title" placeholder="Example: Weekly Study Plan">
+      </div>
+
+      <div class="form-group">
+        <label for="input-date">Date</label>
+        <input type="date" id="input-date" name="date">
+      </div>
+
+      <div class="form-group">
+        <label for="input-priority">Priority</label>
+        <select id="input-priority" name="priority">
+          <option value="">Select Priority</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="input-tasks">To-do List</label>
+        <textarea id="input-tasks" name="tasks" rows="3" placeholder="Example: Read the topics, Do the exercises, Review topics"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="input-cover">Cover Image (optional)</label>
+        <input type="file" id="input-cover" name="cover" accept="image/*">
+      </div>
+    </form>
+
+    <article id="preview" aria-label="Kartu Planner">
+      <section class="preview-card">
+        <div class="wrap-cover">
+          <img id="preview-cover" src="default-cover.jpg" alt="Cover Image">
+        </div>
+
+        <div class="preview-content">
+          <h2 id="preview-title">Planner Title</h2>
+          <p id="preview-meta">
+            <span id="preview-date">Date not selected</span> • 
+            <span id="preview-priority">Priority not selected</span>
+          </p>
+
+          <section class="tasks">
+            <h3 class="tasks-title">To-do List</h3>
+            <ul id="preview-tasks">
+              <li>no tasks added</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p><b>
+      UTS Desain Web<br>
+      Jevrene Samny Pratama — 4524210046<br>
+      UNIVERSITAS PANCASILA
+      </b>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
